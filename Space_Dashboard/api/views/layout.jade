@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title='Famous Space Company Dashboard'
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='shortcut icon', href='/images/favicon.png')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/test.css')
+    link(rel='stylesheet', href='/stylesheets/animate.min.css') 
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700&Open+Sans:300,400,600,700')
+    script(src='/javascripts/main.js')  
+    
+    script.
+      jQuery(function() {  
+      Ares.initHelpers(['appear', 'appear-countTo', 'easy-pie-chart']);
+      }); 
+
+    script.
+      var Shp; text; obj;
+
+      Shp = {
+          shipname: "Giant_Monkey",
+          status: "DOCKED",
+          velocity: 0,
+          unit: "km/s"
+      };
+
+      dJSON = {
+      JSON:stringify(Shp)
+      };
+
+      setItem("pJSON", dJSON);
+         
+        text = {
+        getItem()
+        {
+
+      obj = {
+      JSON:parse(text)
+      };
+      document.getElementById("sh").innerHTML = obj.shipname;
+       
+       
+    
+  
+  body
+    block content
+
+    
+
+  
+  
+        
+    
